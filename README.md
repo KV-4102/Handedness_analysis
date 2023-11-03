@@ -85,6 +85,8 @@ In the following section, we will import the dataset containing information abou
 In the preceding code section, we imported data that provides us with the foundation for calculating P(A). Now, our focus shifts to P(LH), representing the likelihood that an individual who passed away in our specified study year is left-handed, with no additional information available about them. This essentially characterizes the average prevalence of left-handedness within the deceased population. To ascertain this probability, we perform a calculation that involves summing the individual probabilities of left-handedness for each age group, weighted by the number of deceased individuals within each age category. Subsequently, we normalize this calculated value by dividing it by the total number of deceased individuals, yielding a probability.
 
 In mathematical terms, the computation is represented as follows, where N(A) signifies the count of individuals who passed away at age A (as provided by the 'death_distribution_data' dataframe):
+
+
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/d4f0ba43-f8b4-40a7-99a0-107a04ecda50)
 
 
