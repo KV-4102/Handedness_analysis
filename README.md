@@ -58,7 +58,7 @@ In mathematical terms, the computation is represented as follows, where N(A) sig
 
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/d4f0ba43-f8b4-40a7-99a0-107a04ecda50)
 
-**6)Dying while Left-Handed and Right-Handed**
+**Dying while Left-Handed and Right-Handed**
 
 Now that we have the means to calculate the three essential quantities - P(A), P(LH), and P(LH | A) - we can integrate them using Bayes' rule to determine P(A | LH). This represents the probability of attaining a particular age, A, at the time of death within the study year, provided that an individual is left-handed. To provide a meaningful context, it is crucial to compare this probability with P(A | RH), which signifies the likelihood of reaching age A at death for right-handed individuals.
 
