@@ -2,7 +2,7 @@
 In this project, we will explore this phenomenon using age distribution data to see if we can reproduce a difference in average age at death purely from the changing rates of left-handedness over time, refuting the claim of early death for left-handers. This notebook uses pandas and Bayesian statistics to analyze the probability of being a certain age at death given that you are reported as left-handed or right-handed.
 
 
-**1)Locating the old Left-Handed Demographic**
+**Locating the old Left-Handed Demographic**
 
 A survey conducted by National Geographic in 1986 garnered an extensive dataset comprising over a million responses. This dataset encompassed information regarding respondents' age, gender, as well as their hand preferences for tasks such as throwing and writing. Upon thorough examination of this dataset, researchers Avery Gilbert and Charles Wysocki observed a noteworthy pattern: the prevalence of left-handedness was approximately 13% among individuals below the age of 40, but gradually declined with increasing age to approximately 5% among those aged 80 and above. Their analysis further revealed that this age-dependent trend was predominantly influenced by the evolving social acceptance of left-handedness.
 
@@ -12,7 +12,7 @@ This intriguing discovery implies that the rates of left-handedness are not sole
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/23ada2a8-48cd-4c89-bb47-a47a73219b5f)
 
 
-**2)Trends in Left-Handedness Rates Across Eras**
+**Trends in Left-Handedness Rates Across Eras**
 
 Our next step involves the transformation of this dataset into a comprehensive plot illustrating the prevalence of left-handedness in relation to the birth year. To ensure a unified representation, we will compute an average rate by amalgamating data from both male and female participants.
 
@@ -21,7 +21,7 @@ Given that the original study was conducted in 1986, the resulting data from thi
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/d5925390-83f5-4168-b7c8-97b90b7e1c7b)
 
 
-**3)The Application of Bayes' Theorem**
+**The Application of Bayes' Theorem**
 
 It's crucial to recognize that the likelihood of passing away at a specific age, given that you are left-handed, is not equivalent to the probability of being left-handed given that you've reached a certain age. This disparity underscores the significance of Bayes' theorem, a fundamental concept in conditional probability, enabling us to revise our beliefs based on observed evidence.
 
@@ -37,7 +37,7 @@ P(LH | A) represents the probability that an individual is left-handed, given th
 To determine P(LH | A) for ages falling beyond the original dataset, we must extrapolate the data to encompass earlier and later years. Given that the rates exhibit a plateau in the early 1900s and late 1900s, we will employ several data points at each extremity and calculate the average to estimate the rates for those time frames. While the choice of the number of points used for this estimation may be somewhat arbitrary, we will opt for 10 data points, considering that the data appears relatively stable until approximately 1910.
 
 
-**4)Estimating Typical Lifespan**
+**Estimating Typical Lifespan**
 
 To gauge the probability of reaching a specific age, A, we can leverage data that provides insights into the number of individuals who passed away in a given year and their respective ages at the time of death. By normalizing these figures in relation to the total number of individuals who passed away, we can view this dataset as a probability distribution, offering the likelihood of passing away at age A. The dataset we will utilize for this purpose is derived from the entire United States for the year 1999, representing the closest available data within the relevant time frame.
 
@@ -46,7 +46,7 @@ In the following section, we will import the dataset containing information abou
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/d0203f0e-6f84-433f-b947-f710d1da5d3d)
 
 
-**5)Determining the Overall Probability of Left-Handedness**
+**Determining the Overall Probability of Left-Handedness**
 
 
 In the preceding code section, we imported data that provides us with the foundation for calculating P(A). Now, our focus shifts to P(LH), representing the likelihood that an individual who passed away in our specified study year is left-handed, with no additional information available about them. This essentially characterizes the average prevalence of left-handedness within the deceased population. To ascertain this probability, we perform a calculation that involves summing the individual probabilities of left-handedness for each age group, weighted by the number of deceased individuals within each age category. Subsequently, we normalize this calculated value by dividing it by the total number of deceased individuals, yielding a probability.
@@ -83,8 +83,24 @@ At last, the moment of truth has arrived, where we shall compare our findings wi
 
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/ebe54637-727c-4931-863c-4d461c42f647)
 
+Output:
 
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/48283471-c367-469c-b9fd-99e65c3b1e77)
+
+**Concluding Remarks**
+
+Our investigation has unveiled a significant age difference between left-handed and right-handed individuals, primarily driven by the shifting prevalence of left-handedness within the population. This presents encouraging news for left-handers, dispelling the notion of a shorter lifespan due to sinistrality. The reported rates of left-handedness have surged from a mere 3% in the early 1900s to approximately 11% in the present day. As a consequence, older generations are more inclined to be categorized as right-handed rather than left-handed, leading to a larger proportion of elderly right-handers in a sample of recently deceased individuals.
+
+It's important to note that our observed age gap is somewhat less than the 9-year differential reported in the original study. Several factors may have contributed to this variation:
+
+1. We employed death distribution data from a time frame almost a decade later than the study (1999 instead of 1991), and we utilized data from the entire United States rather than California alone, as in the original study.
+2. Our extrapolation of left-handedness survey results to encompass older and younger age groups may not precisely align with the actual rates for those age categories.
+One potential avenue for future investigation is to determine the expected variability in the age difference arising purely from random sampling. By taking smaller samples of recently deceased individuals and assigning handedness based on survey probabilities, we can explore the distribution of age differences. How frequently would we encounter a nine-year age gap using the same data and assumptions? While we won't delve into this here, it remains a feasible endeavor with the available data and the tools of random sampling.
+
+To conclude, let's calculate the anticipated age gap if we were to conduct the study in 2018 instead of 1990. The resulting gap is notably smaller, as the rates of left-handedness have remained relatively stable for individuals born after approximately 1960. Both the National Geographic study and the 1990 study transpired during a unique era when handedness rates were undergoing substantial change across the lifespans of most individuals, accentuating the contrast in handedness between older and younger generations.
+
+![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/b5bcac11-4391-4bc6-a98d-886ffaafd9c7)
+
 
 
 
