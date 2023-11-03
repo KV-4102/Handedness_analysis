@@ -19,6 +19,7 @@ Given that the original study was conducted in 1986, the resulting data from thi
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/d5925390-83f5-4168-b7c8-97b90b7e1c7b)
 
 **The Application of Bayes' Theorem**
+
 It's crucial to recognize that the likelihood of passing away at a specific age, given that you are left-handed, is not equivalent to the probability of being left-handed given that you've reached a certain age. This disparity underscores the significance of Bayes' theorem, a fundamental concept in conditional probability, enabling us to revise our beliefs based on observed evidence.
 
 Our objective is to compute the probability of one's demise at age A, denoted as P(A | LH), for left-handed individuals. Similarly, we seek the same probability for right-handers, denoted as P(A | RH).
@@ -66,6 +67,7 @@ P(LH | A) represents the probability that an individual is left-handed, given th
 To determine P(LH | A) for ages falling beyond the original dataset, we must extrapolate the data to encompass earlier and later years. Given that the rates exhibit a plateau in the early 1900s and late 1900s, we will employ several data points at each extremity and calculate the average to estimate the rates for those time frames. While the choice of the number of points used for this estimation may be somewhat arbitrary, we will opt for 10 data points, considering that the data appears relatively stable until approximately 1910.
 
 **Estimating Typical Lifespan**
+
 To gauge the probability of reaching a specific age, A, we can leverage data that provides insights into the number of individuals who passed away in a given year and their respective ages at the time of death. By normalizing these figures in relation to the total number of individuals who passed away, we can view this dataset as a probability distribution, offering the likelihood of passing away at age A. The dataset we will utilize for this purpose is derived from the entire United States for the year 1999, representing the closest available data within the relevant time frame.
 
 In the following section, we will import the dataset containing information about the distribution of ages at the time of death and generate a corresponding plot. The first column within the dataset pertains to the age, while the subsequent columns denote the number of individuals who passed away at each respective age.
