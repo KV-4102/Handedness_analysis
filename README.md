@@ -2,7 +2,7 @@
 In this project, we will explore this phenomenon using age distribution data to see if we can reproduce a difference in average age at death purely from the changing rates of left-handedness over time, refuting the claim of early death for left-handers. This notebook uses pandas and Bayesian statistics to analyze the probability of being a certain age at death given that you are reported as left-handed or right-handed.
 
 
-**1)Locating the oldLeft-Handed Demographic**
+**1)Locating the old Left-Handed Demographic**
 
 A survey conducted by National Geographic in 1986 garnered an extensive dataset comprising over a million responses. This dataset encompassed information regarding respondents' age, gender, as well as their hand preferences for tasks such as throwing and writing. Upon thorough examination of this dataset, researchers Avery Gilbert and Charles Wysocki observed a noteworthy pattern: the prevalence of left-handedness was approximately 13% among individuals below the age of 40, but gradually declined with increasing age to approximately 5% among those aged 80 and above. Their analysis further revealed that this age-dependent trend was predominantly influenced by the evolving social acceptance of left-handedness.
 
@@ -58,7 +58,7 @@ In mathematical terms, the computation is represented as follows, where N(A) sig
 
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/d4f0ba43-f8b4-40a7-99a0-107a04ecda50)
 
-**Dying while Left-Handed and Right-Handed**
+**6)Dying while Left-Handed and Right-Handed**
 
 Now that we have the means to calculate the three essential quantities - P(A), P(LH), and P(LH | A) - we can integrate them using Bayes' rule to determine P(A | LH). This represents the probability of attaining a particular age, A, at the time of death within the study year, provided that an individual is left-handed. To provide a meaningful context, it is crucial to compare this probability with P(A | RH), which signifies the likelihood of reaching age A at death for right-handed individuals.
 
@@ -66,6 +66,17 @@ Now that we have the means to calculate the three essential quantities - P(A), P
 
 
 We will perform this calculation twice: once for left-handers and once for right-handers.
+
+
+**Visualizing Conditional Probability Distributions**
+
+Now that we have established functions for computing the probability of being a certain age, A, at the time of death for left-handed and right-handed individuals, let's proceed to create graphical representations of these probabilities across a spectrum of ages, spanning from 6 to 120 years.
+
+It is worth observing that the distribution for left-handed individuals exhibits a distinctive peak below the age of 70. This intriguing phenomenon indicates that, among the deceased population, left-handed individuals are more likely to be of a younger age at the time of their demise.
+
+
+![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/129e6d3c-278f-465b-aa4f-f287589c9fcf)
+
 
 
 
