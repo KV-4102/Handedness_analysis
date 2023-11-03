@@ -17,3 +17,16 @@ Our next step involves the transformation of this dataset into a comprehensive p
 Given that the original study was conducted in 1986, the resulting data from this transformation will provide us with a crucial insight – specifically, it will depict the proportion of individuals alive in 1986 who exhibit left-handedness tendencies, contingent upon their birth year.
 
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/d5925390-83f5-4168-b7c8-97b90b7e1c7b)
+
+The Application of Bayes' Theorem
+It's crucial to recognize that the likelihood of passing away at a specific age, given that you are left-handed, is not equivalent to the probability of being left-handed given that you've reached a certain age. This disparity underscores the significance of Bayes' theorem, a fundamental concept in conditional probability, enabling us to revise our beliefs based on observed evidence.
+
+Our objective is to compute the probability of one's demise at age A, denoted as P(A | LH), for left-handed individuals. Similarly, we seek the same probability for right-handers, denoted as P(A | RH).
+
+Bayes' theorem can be applied to the two events we are concerned with: left-handedness (LH) and the occurrence of death at age A.
+
+P(A | LH) = \frac{P(LH|A) P(A)}{P(LH)}
+
+P(LH | A) represents the probability that an individual is left-handed, given that they passed away at age A. P(A) stands for the overall probability of death occurring at age A, and P(LH) is the overall likelihood of being left-handed. We will now proceed to calculate each of these three values, commencing with P(LH | A).
+
+To determine P(LH | A) for ages falling beyond the original dataset, we must extrapolate the data to encompass earlier and later years. Given that the rates exhibit a plateau in the early 1900s and late 1900s, we will employ several data points at each extremity and calculate the average to estimate the rates for those time frames. While the choice of the number of points used for this estimation may be somewhat arbitrary, we will opt for 10 data points, considering that the data appears relatively stable until approximately 1910.
