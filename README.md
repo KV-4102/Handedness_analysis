@@ -77,6 +77,14 @@ It is worth observing that the distribution for left-handed individuals exhibits
 
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/129e6d3c-278f-465b-aa4f-f287589c9fcf)
 
+**The Decisive Assessment: Age at Death for Left and Right-Handers**
+
+At last, the moment of truth has arrived, where we shall compare our findings with those of the initial study that indicated a nine-year disparity in the average age at death for left-handed individuals. We can accomplish this by computing the mean of these probability distributions, akin to how we calculated P(LH) earlier, by weighting the probability distribution with respect to age and subsequently summing the outcome
+
+![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/ebe54637-727c-4931-863c-4d461c42f647)
+
+
+![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/48283471-c367-469c-b9fd-99e65c3b1e77)
 
 
 
