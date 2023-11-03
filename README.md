@@ -25,6 +25,8 @@ Our objective is to compute the probability of one's demise at age A, denoted as
 
 Bayes' theorem can be applied to the two events we are concerned with: left-handedness (LH) and the occurrence of death at age A.
 
+
+
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <mi>P</mi>
   <mo stretchy="false">(</mo>
@@ -57,6 +59,8 @@ Bayes' theorem can be applied to the two events we are concerned with: left-hand
     </mrow>
   </mfrac>
 </math>
+
+
 
 P(LH | A) represents the probability that an individual is left-handed, given that they passed away at age A. P(A) stands for the overall probability of death occurring at age A, and P(LH) is the overall likelihood of being left-handed. We will now proceed to calculate each of these three values, commencing with P(LH | A).
 
