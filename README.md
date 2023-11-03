@@ -6,3 +6,8 @@ A survey conducted by National Geographic in 1986 garnered an extensive dataset 
 This intriguing discovery implies that the rates of left-handedness are not solely a product of one's chronological age but are intrinsically linked to the era in which one was born. Consequently, if the same survey were conducted today, we could anticipate a modified manifestation of the same distribution, contingent upon the prevailing attitudes towards left-handedness. This raises a fascinating question concerning the potential impact of this shifting rate on the apparent average lifespan of left-handed individuals. However, before delving into the implications for life expectancy, it is prudent to commence our exploration by graphically depicting the variations in left-handedness rates across different age groups.
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/23ada2a8-48cd-4c89-bb47-a47a73219b5f)
 
+*Trends in Left-Handedness Rates Across Eras*
+Our next step involves the transformation of this dataset into a comprehensive plot illustrating the prevalence of left-handedness in relation to the birth year. To ensure a unified representation, we will compute an average rate by amalgamating data from both male and female participants.
+
+Given that the original study was conducted in 1986, the resulting data from this transformation will provide us with a crucial insight – specifically, it will depict the proportion of individuals alive in 1986 who exhibit left-handedness tendencies, contingent upon their birth year.
+
