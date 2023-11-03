@@ -12,7 +12,7 @@ This intriguing discovery implies that the rates of left-handedness are not sole
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/23ada2a8-48cd-4c89-bb47-a47a73219b5f)
 
 
-**Trends in Left-Handedness Rates Across Eras**
+**2)Trends in Left-Handedness Rates Across Eras**
 
 Our next step involves the transformation of this dataset into a comprehensive plot illustrating the prevalence of left-handedness in relation to the birth year. To ensure a unified representation, we will compute an average rate by amalgamating data from both male and female participants.
 
@@ -21,7 +21,7 @@ Given that the original study was conducted in 1986, the resulting data from thi
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/d5925390-83f5-4168-b7c8-97b90b7e1c7b)
 
 
-**The Application of Bayes' Theorem**
+**3)The Application of Bayes' Theorem**
 
 It's crucial to recognize that the likelihood of passing away at a specific age, given that you are left-handed, is not equivalent to the probability of being left-handed given that you've reached a certain age. This disparity underscores the significance of Bayes' theorem, a fundamental concept in conditional probability, enabling us to revise our beliefs based on observed evidence.
 
@@ -70,7 +70,7 @@ P(LH | A) represents the probability that an individual is left-handed, given th
 To determine P(LH | A) for ages falling beyond the original dataset, we must extrapolate the data to encompass earlier and later years. Given that the rates exhibit a plateau in the early 1900s and late 1900s, we will employ several data points at each extremity and calculate the average to estimate the rates for those time frames. While the choice of the number of points used for this estimation may be somewhat arbitrary, we will opt for 10 data points, considering that the data appears relatively stable until approximately 1910.
 
 
-**Estimating Typical Lifespan**
+**4)Estimating Typical Lifespan**
 
 To gauge the probability of reaching a specific age, A, we can leverage data that provides insights into the number of individuals who passed away in a given year and their respective ages at the time of death. By normalizing these figures in relation to the total number of individuals who passed away, we can view this dataset as a probability distribution, offering the likelihood of passing away at age A. The dataset we will utilize for this purpose is derived from the entire United States for the year 1999, representing the closest available data within the relevant time frame.
 
@@ -79,14 +79,26 @@ In the following section, we will import the dataset containing information abou
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/d0203f0e-6f84-433f-b947-f710d1da5d3d)
 
 
-**Determining the Overall Probability of Left-Handedness**
+**5)Determining the Overall Probability of Left-Handedness**
 
 
 In the preceding code section, we imported data that provides us with the foundation for calculating P(A). Now, our focus shifts to P(LH), representing the likelihood that an individual who passed away in our specified study year is left-handed, with no additional information available about them. This essentially characterizes the average prevalence of left-handedness within the deceased population. To ascertain this probability, we perform a calculation that involves summing the individual probabilities of left-handedness for each age group, weighted by the number of deceased individuals within each age category. Subsequently, we normalize this calculated value by dividing it by the total number of deceased individuals, yielding a probability.
+
+
 
 In mathematical terms, the computation is represented as follows, where N(A) signifies the count of individuals who passed away at age A (as provided by the 'death_distribution_data' dataframe):
 
 
 ![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/d4f0ba43-f8b4-40a7-99a0-107a04ecda50)
+
+**Dying while Left-Handed and Right-Handed**
+
+Now that we have the means to calculate the three essential quantities - P(A), P(LH), and P(LH | A) - we can integrate them using Bayes' rule to determine P(A | LH). This represents the probability of attaining a particular age, A, at the time of death within the study year, provided that an individual is left-handed. To provide a meaningful context, it is crucial to compare this probability with P(A | RH), which signifies the likelihood of reaching age A at death for right-handed individuals.
+
+![image](https://github.com/KV-4102/Handedness_analysis/assets/128924918/ed6248d5-df2d-4c16-8188-1c1872a7e618)
+
+
+We will perform this calculation twice: once for left-handers and once for right-handers.
+
 
 
